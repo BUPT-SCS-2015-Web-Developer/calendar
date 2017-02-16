@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2017 年 02 月 10 日 11:40
+-- 生成日期: 2017 年 02 月 16 日 17:51
 -- 服务器版本: 5.5.47
 -- PHP 版本: 5.3.29
 
@@ -28,12 +28,14 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `matters` (
   `ID` int(11) NOT NULL,
-  `date` date NOT NULL,
+  `datetime` datetime NOT NULL,
   `name` varchar(128) NOT NULL,
   `type` enum('blue','orange','red','green') NOT NULL,
   `detail` mediumtext NOT NULL,
   `images` varchar(32) NOT NULL,
-  `organizer` varchar(255) NOT NULL,
+  `locate` varchar(255) NOT NULL,
+  `SID` int(11) NOT NULL,
+  `QRcode` varchar(128) NOT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -48,6 +50,31 @@ CREATE TABLE IF NOT EXISTS `notice` (
   `ID` int(11) NOT NULL,
   `Ndetail` varchar(2048) NOT NULL,
   PRIMARY KEY (`NID`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `organizers`
+--
+
+CREATE TABLE IF NOT EXISTS `organizers` (
+  `SID` int(11) NOT NULL,
+  `Oname` varchar(255) NOT NULL,
+  `Otype` enum('main','assist') NOT NULL,
+  PRIMARY KEY (`SID`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `series`
+--
+
+CREATE TABLE IF NOT EXISTS `series` (
+  `SID` int(11) NOT NULL AUTO_INCREMENT,
+  `Sname` varchar(255) NOT NULL,
+  PRIMARY KEY (`SID`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
