@@ -22,6 +22,11 @@
 	$insertnotice->bindParam(2,$notice);
 	$insertnotice->execute();
 	//print_r($insertnotice->errorInfo());
+	$insertsubscribe = $DBH->prepare("insert into subscribe (userID,type,ID) values (?,'notice',?)");
+	$insertsubscribe->bindParam(1,$user_id);
+	$insertsubscribe->bindParam(2,$notice_id);
+	$insertsubscribe->execute();
+	//print_r($insertsubscribe->errorInfo());
 	echo "发布成功！";
 	}
 	catch(PDOException $e){

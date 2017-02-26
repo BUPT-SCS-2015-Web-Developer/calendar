@@ -16,9 +16,9 @@
         <div class="nav-wrapper teal">
             <a href="#" class="brand-logo">此处为Logo</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="AddSeries.php">申请系列活动</a></li>
+                <li class="active"><a href="AddSeries.php">申请系列活动</a></li>
                 <li><a href="AddMatters.php">添加事件</a></li>
-                <li class="active"><a href="AddNotice.php">添加通知</a></li>
+                <li><a href="AddNotice.php">添加通知</a></li>
                
             </ul>
         </div>
@@ -27,35 +27,25 @@
     <div class="container">
         
         <div class="row">
-            <form class="col s8 offset-s2" action="AddNotice_work.php">
-                <div class="card-panel z-depth-3">
+            <form class="col s8 offset-s2" method="post" action="AddSeries_work.php">
+                   <div class="card-panel z-depth-3">
                     <div class="row">
                         <div class="input-field">
-                            <input id="notice_id" name="notice_id" type="text" class="validate">
-                            <label for="notice_id">活动ID</label>
+                            <input id="series_name" name="series_name" type="text" class="validate">
+                            <label for="series_name">系列活动名称</label>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="input-field">
-                            <textarea id="notice" name="notice" class="materialize-textarea" length=140></textarea>
-                            <label for="notice">通知内容</label>
-                        </div>
-                    </div>
-                    
-                    
-                   
-                    <button class="btn waves-effect waves-light" type="submit" >发布
+                    <button class="btn waves-effect waves-light" type="submit" >确认
                     </button>
 
-                </div>    
             </form>
             
         </div> 
     </div>
-    
-    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/init.js"></script>
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.js"></script>
 
+    
 </body>
-</html>
+</html> 
