@@ -1,10 +1,6 @@
 <?php
 	session_start();
 	include("connect.php");
-	/**/
-	$_SESSION['token']='123';
-	$_SESSION['usrid']='988793';
-	$_SESSION['name']='Atlas';
 	/*验证易班的session*/
 	if(!isset($_SESSION['token'])||!isset($_SESSION['usrid'])||!isset($_SESSION['name'])){
         exit('illegal access!');

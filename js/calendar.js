@@ -255,7 +255,7 @@ function monthSelect(){
 			$(".wrapper").css("left",leftPosTemp+e.clientX-oldX+'px');
 			leftPos=leftPosTemp+e.clientX-oldX;
 			var x=$(".branch1").offset().left;
-			console.log(x);
+			//console.log(x);
 			x=3-Math.floor((x-$(".leftpart").width()+(monthY))/(monthX));
 			for(var i=1;i<=12;i++){
 				if(i==x){
@@ -272,7 +272,7 @@ function monthSelect(){
 				}
 			}
 			$(".branch"+i)
-			console.log(x);
+			//console.log(x);
 		}
 	});
 	$("html").mouseup(function(e){
@@ -313,7 +313,7 @@ function circlerotate(){
             else{
                 date=parseInt(angle/10)+36;
             }
-            console.log(date);
+            //console.log(date);
             $(".calendarNum").html(date);
             
         }
@@ -331,7 +331,7 @@ function circlerotate(){
             $('.calNum0').css("background-position",'0px 0px');
             var numDate=String(n).charAt(0);
             var y=(-parseInt(numDate)*200);
-            console.log(y);
+            //console.log(y);
             $('.calNum1').css("background-position",'0px '+y+'px');
         }
         if(len==2){
