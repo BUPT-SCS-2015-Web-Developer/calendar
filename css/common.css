@@ -1,0 +1,127 @@
+*{
+	margin: 0; padding: 0;
+}
+@font-face{
+	font-family:calendardate;
+	src:url("../fonts/Folio MN ExtraBold.ttf");
+}
+html{
+	
+}
+#body{
+	width: 100%; background: url("../img/bg.png") no-repeat; background-size: 100%; position: absolute;
+}
+.main{
+
+}
+.monthSelect{
+	height: 160px; margin:20px auto; margin-bottom:0px; position: absolute; overflow: hidden;
+}
+.dateSelect{
+	height: 600px; margin-top:150px;
+}
+.wrapper{
+	width: 2080px; position: absolute;	
+}
+.branch{
+	float: left; text-decoration: none;	width: 160px; height: 80px; list-style: none; opacity: 0.2; margin-top: 40px;
+}
+#circle{
+	background: url("../img/circle.png") no-repeat; background-size: 100% 100%;
+}
+#date{
+
+}
+.calendar{
+     z-index: 1; background: url("../img/calendarnew.png") no-repeat; background-size: 100% 100%;
+}
+.calendarNum{
+	position: relative; font-size: 6em; line-height: 70px; text-align: center;
+}
+#act{
+	width: 100%; height: 100%;
+}
+#act .actBg{
+	width: 100%; height: 100%; background-color: rgb(199,211,227); opacity: 0.7; z-index: 1; position: absolute;
+}
+#act .container{
+	max-width: 860px; position: relative; font-family: "微软雅黑"; z-index: 2;
+}
+#actContent{
+	min-height: 620px; position: relative;
+}
+.hostcard{
+	min-height: 300px; margin-bottom: 15px; background-color: #111111; color: #FFF; font-weight: bolder; font-family: '微软雅黑';
+}
+.hostcard h1{
+	font-size: 40px; position: relative; margin-top: 35px; margin-bottom:35px; display: inline-block;
+}
+.classifycard{
+	min-height: 305px; background-color: #f4d03f; position: relative; display: block; padding: 15px 0; text-align: right; margin: 0;
+}
+.classifycard .btn{
+	background: #111111; color: #f4d03f; display: inline-block; position: relative; margin-top: 35px;
+}
+.classifycard .btn span{
+	margin-right: 5px; 
+}
+.no-padding{
+	list-style: none; padding-left: 0;
+}
+ul.nav-classify li{
+	position: relative; padding: 12px 15px; width: 100%; border-bottom: 1px solid #e1c03a; font-size: 18px; margin: 0; font-family: "微软雅黑"; cursor: pointer; overflow: hidden;
+}
+ul.nav-classify li.selected{
+	background-color: #111111; border-bottom-color: #111111; border-right: none; color: #f4d03f; 
+}
+ul.nav-classify li span.nav-content{
+	padding-right: 25px; margin-right: 15px; border-right: 2px solid #e1c03a;
+}
+.actYellow{
+	color: #f4d03f;
+}
+.hostimg{
+	width: 140px; height: 140px; border-radius: 70px; border: 7px solid #f4d03f; background-color: #FFF; position: relative; margin: 0 auto;
+}
+.title-container{
+	width: 100%; height: 130px; background-color: #111111; position: relative; margin-bottom: 15px; z-index: 2;
+}
+.title-container h1{
+	font-size: 34px; position: relative; margin-top: 60px; margin-left:20px; display: inline-block; color: #FFF; font-family: "微软雅黑"; letter-spacing: 1.2px;
+}
+.description-container{
+	height: 475px; background-color: #FFF; position: relative; margin-top: 0; padding: 15px 30px; overflow: hidden; z-index: 2;
+}
+.fade-text-title{
+	display: inline-block; font-family: "微软雅黑"; font-size: 22.5px; margin: 10px 0; margin-bottom: 20px;
+}
+.fade-text-title span{
+	background: #f4d03f; padding: 2px 5px; margin-left: 5px; color: #000; color: #111;
+}
+.fade-text-content{
+	color: #666666; font-size: 14px; line-height: 1.7em; letter-spacing: 0.02em; height: 100px; overflow: hidden;
+}
+.suspect-info{
+	padding:0;
+}
+.suspect-info-title{
+	margin:0; position: relative; margin-top: 50px; font-size: 22px; font-family: "微软雅黑"; padding-bottom: 15px;
+}
+.suspect-info-branch{
+	margin-bottom: 9px; position: relative; font-size: 12.5px;
+}
+.suspect-info-branch-left{
+	display: inline-block; padding: 4px 10px 5px; background: #f4d03f; color: #111111; width: 75px; min-width: 75px; margin-right: 5px;
+}
+.suspect-info-branch-right{
+	display: inline-block; padding: 4px 15px 5px; background: #111111; color: #fff; 
+}
+.bin-search-code{
+	width: 80px; height: 80px; float: left; margin-left: 5px; z-index: 4;
+}
+.poster-container{
+	position: absolute; right: 30px; bottom:20px; width: 200px; z-index: 20;	
+}
+.page-container .selected{
+	display: block;
+}

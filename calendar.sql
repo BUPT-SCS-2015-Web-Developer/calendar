@@ -27,7 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `matters` (
-  `ID` int(11) NOT NULL,
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
   `datetime` datetime NOT NULL,
   `name` varchar(128) NOT NULL,
   `type` enum('blue','orange','red','green') NOT NULL,
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `matters` (
   `SID` int(11) NOT NULL,
   `QRcode` varchar(128) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -86,7 +86,6 @@ CREATE TABLE IF NOT EXISTS `series` (
 CREATE TABLE IF NOT EXISTS `subscribe` (
   `pkey` int(11) NOT NULL AUTO_INCREMENT,
   `userID` varchar(64) NOT NULL,
-  `type` enum('notice','matters') NOT NULL,
   `ID` int(11) NOT NULL,
   PRIMARY KEY (`pkey`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
