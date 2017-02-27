@@ -29,6 +29,7 @@
 	<script src="js/jQueryTween-aio-min.js"></script>
 	<script src="js/materialize.min.js"></script>
 	<script src="js/calendar.js"></script>
+	<script src="js/notice_moudle.js"></script>
 
 </head>
 	<body>
@@ -55,7 +56,26 @@
 					<div class="dateSelect">
 						<div class="row">
 							<div class="col s7">
-								<div id="circle"></div>
+								<div id="circle">
+									<?php
+										date_default_timezone_set('Asia/Shanghai');
+										$date = new DateTime();
+										$nowtime = $date->format('Y-m-d');
+										/*显示今天的所有活动*/
+										$sql=$DBH->prepare("select name,ID from matters where datetime like '$nowtime%' order by datetime");
+										$sql->execute();
+										$result = $sql->fetchAll(PDO::FETCH_ASSOC);
+										//print_r($sql->errorInfo());
+										//var_dump($result);
+										foreach ($result as $onematter) {
+											?>
+											<div id="matter-<?=$onematter['ID']?>">
+											<?php echo $onematter['name'];?>
+											</div>
+											<?php
+										}
+									?>
+								</div>
 							</div>
 							<div class="col s5">
 								<div id="date">
@@ -71,6 +91,10 @@
 				</div>
 				<div class="col s3 rightpart"></div>
 			</div>
+			<!--特别通知-->
+			<div class="important-notice">
+			</div>
+			<!---->
 		</div>
 		<div id="act" class="hide">
 			<div class="actBg"></div>
