@@ -18,7 +18,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>邮动力</title>
-	
+
 	<!-- jquery -->
 	<script src="js/jquery-1.7.2.min.js"></script>
 	<!-- materialize -->

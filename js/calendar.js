@@ -1,15 +1,15 @@
 $(function(){
 	init_window();
 	$("#circle").click(function(e){
-		$("#act").removeClass("hide");
+		/*$("#act").removeClass("hide");*/
 		init_window();
-		barIn();
+		/*barIn();*/
 	})
-	$(".actBg").click(function(e){
+	/*$(".actBg").click(function(e){
 		
 		barOut();
-	})
-	
+	})*/
+
 	<!-- 页面改变初始化页面布局 -->
 	$(window).resize(function(){
 		init_window();
